@@ -226,7 +226,7 @@ rule-providers:
   chinadomain: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"}
   chinacompanyip: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"}
   download: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"}
-  banad: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/Clash/BanAD.list"}
+  banad: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"}
   banprogramad: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"}
   
   myban: { <<: *class, url: "https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/Myban.list"}
