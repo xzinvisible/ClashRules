@@ -145,7 +145,7 @@ proxy-groups:
   - {name: 🚀 默认代理, type: select, proxies: [🇭🇰 香港节点, 🇺🇲 美国节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇨🇳 台湾节点, 🌍 特殊节点, 🚀 手动切换, DIRECT]}
   - {name: 🚀 手动切换, type: select, include-all: true}
   - {name: 🐟 漏网之鱼, <<: *pr}
-  - {name: 🏠 内网, type: select, proxies: [🖥️ tailscale，DIRECT]}
+  - {name: 🏠 内网, type: select, proxies: [🖥️ tailscale, DIRECT]}
   - {name: 🎮 游戏平台, <<: *pr}
   - {name: 💬 Ai平台, <<: *pr}
   - {name: Ⓜ️ 微软云盘, <<: *pr}
