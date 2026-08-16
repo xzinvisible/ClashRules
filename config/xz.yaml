@@ -169,7 +169,7 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
   - RULE-SET,myproxy,🛠️ 自定义
-  - RULE-SET,lan,🏠 内网
+  - RULE-SET,mylan,🏠 内网
   - RULE-SET,mydirect,🎯 全球直连
   - RULE-SET,bilibilihmt,📺 哔哩哔哩
   - RULE-SET,bilibili,📺 哔哩哔哩
@@ -214,7 +214,7 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
   myproxy: { <<: *class, url: "https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/Myproxy.list"}
-  lan: { <<: *class, url: "https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/LAN.list"}
+  mylan: { <<: *class, url: "https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/LAN.list"}
   mydirect: { <<: *class, url: "https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/Mydirect.list"}
   bilibilihmt: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list"}
   bilibili: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list"}
