@@ -104,7 +104,7 @@ dns:
       - 127.0.0.0/8
       - 169.254.0.0/16
       - 172.16.0.0/12
-#      - 192.168.0.0/16
+      - 192.168.0.0/16
       - 224.0.0.0/4
       - 240.0.0.0/4
       - 255.255.255.255/32
@@ -145,7 +145,6 @@ proxy-groups:
   - {name: 🚀 默认代理, type: select, proxies: [🇭🇰 香港节点, 🇺🇲 美国节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇨🇳 台湾节点, 🌍 特殊节点, 🚀 手动切换, DIRECT]}
   - {name: 🚀 手动切换, type: select, include-all: true}
   - {name: 🐟 漏网之鱼, <<: *pr}
-  - {name: 🏠 内网, type: select, proxies: [🖥️ tailscale, DIRECT]}
   - {name: 🎮 游戏平台, <<: *pr}
   - {name: 💬 Ai平台, <<: *pr}
   - {name: Ⓜ️ 微软云盘, <<: *pr}
@@ -161,7 +160,6 @@ proxy-groups:
   - {name: 🇨🇳 台湾节点, type: select, include-all: true, filter: "(?i)台|新北|彰化|TW|Taiwan"}
   - {name: 🌍 特殊节点, type: select, include-all: true, filter: "(?i)土|土耳其|阿|阿根廷|尼|尼日利亚|印度|Tr|Turkey|TR|AG|Ag|Argentina|Nigeria|NI|Ni"}
   - {name: 🎥 奈飞节点, type: select, include-all: true, filter: "(?i)NF|奈飞|解锁|Netflix|NETFLIX|Media"}
-  - {name: 🖥️ tailscale, type: select, include-all: true, filter: "(?i)tailscale"}
 
   - {name: 🎯 全球直连, type: select, proxies: [DIRECT, 🚀 默认代理]}
   - {name: 🛑 广告拦截, type: select, proxies: [REJECT, DIRECT]}
@@ -170,7 +168,6 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
   - RULE-SET,myproxy,🛠️ 自定义
-  - RULE-SET,mylan,🏠 内网
   - RULE-SET,mydirect,🎯 全球直连
   - RULE-SET,bilibilihmt,📺 哔哩哔哩
   - RULE-SET,bilibili,📺 哔哩哔哩
@@ -215,7 +212,6 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
   myproxy: { <<: *class, url: "https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/Myproxy.list"}
-  mylan: { <<: *class, url: "https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/LAN.list"}
   mydirect: { <<: *class, url: "https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/Mydirect.list"}
   bilibilihmt: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list"}
   bilibili: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list"}
