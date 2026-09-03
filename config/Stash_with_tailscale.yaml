@@ -174,7 +174,7 @@ rules:
   - RULE-SET,mydirect,🎯 全球直连
   - RULE-SET,bilibilihmt,📺 哔哩哔哩
   - RULE-SET,bilibili,📺 哔哩哔哩
-  - RULE-SET,lan,🎯 全球直连
+  - RULE-SET,lan,🏠 内网
   - RULE-SET,unban,🎯 全球直连
   - RULE-SET,googlecn,🎯 全球直连
   - RULE-SET,steamcn,🎯 全球直连
@@ -185,7 +185,7 @@ rules:
   - RULE-SET,chinadomain,🎯 全球直连
   - RULE-SET,chinacompanyip,🎯 全球直连
   - RULE-SET,download,🎯 全球直连
-  - GEOIP,LAN,🎯 全球直连
+  - GEOIP,LAN,🏠 内网
   - GEOIP,CN,🎯 全球直连
   - RULE-SET,banad,🛑 广告拦截
   - RULE-SET,banprogramad,🛑 广告拦截
