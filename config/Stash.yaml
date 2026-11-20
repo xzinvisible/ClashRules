@@ -194,6 +194,7 @@ rules:
   - RULE-SET,microsoft,🪟 微软服务
   - RULE-SET,ai,💬 Ai平台
   - RULE-SET,openai,💬 Ai平台
+  - RULE-SET,myai,💬 Ai平台
   - RULE-SET,epic,🎮 游戏平台
   - RULE-SET,origin,🎮 游戏平台
   - RULE-SET,sony,🎮 游戏平台
@@ -239,6 +240,7 @@ rule-providers:
   microsoft: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list"}
   ai: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list"} 
   openai: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list"}
+  myai: { <<: *class, url: "https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/AI.list"}
   epic: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list"}
   origin: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list"}
   sony: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list"}
