@@ -102,6 +102,7 @@ https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list, po
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list, policy=🪟 微软服务, tag=Microsoft, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list, policy=💬 Ai平台, tag=AI, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list, policy=💬 Ai平台, tag=OpenAi, enabled=true
+https://www.nsloon.com/openloon/import?rules=https://rule.kelee.one/Loon/Gemini.lsr, policy=💬 Ai平台, tag=Gemini, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list, policy=🎮 游戏平台, tag=Epic, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list, policy=🎮 游戏平台, tag=Origin, enabled=true
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list, policy=🎮 游戏平台, tag=Sony, enabled=true
