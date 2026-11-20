@@ -170,6 +170,7 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
   - RULE-SET,myproxy,🛠️ 自定义
+  - RULE-SET,myai,💬 Ai平台
   - RULE-SET,mylan,🏠 内网
   - RULE-SET,mydirect,🎯 全球直连
   - RULE-SET,bilibilihmt,📺 哔哩哔哩
