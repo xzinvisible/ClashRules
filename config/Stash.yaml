@@ -192,6 +192,7 @@ rules:
   - RULE-SET,myban,🛑 广告拦截
   - RULE-SET,onedrive,Ⓜ️ 微软云盘
   - RULE-SET,microsoft,🪟 微软服务
+  - GEOSITE,google,💬 Ai平台
   - RULE-SET,ai,💬 Ai平台
   - RULE-SET,openai,💬 Ai平台
   - RULE-SET,myai,💬 Ai平台
