@@ -140,9 +140,9 @@ dns:
  
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
-pr: &pr {type: select, proxies: [🚀 默认代理, 🇭🇰 香港节点, 🇺🇲 美国节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇨🇳 台湾节点, 🌍 特殊节点, 🚀 手动切换, DIRECT]}
+pr: &pr {type: select, proxies: [🚀 默认代理, 🇭🇰 香港节点, 🇺🇲 美国节点, 🚀 手动切换, DIRECT]}
 proxy-groups:
-  - {name: 🚀 默认代理, type: select, proxies: [🇭🇰 香港节点, 🇺🇲 美国节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇨🇳 台湾节点, 🌍 特殊节点, 🚀 手动切换, DIRECT]}
+  - {name: 🚀 默认代理, type: select, proxies: [🇭🇰 香港节点, 🇺🇲 美国节点, 🚀 手动切换, DIRECT]}
   - {name: 🚀 手动切换, type: select, include-all: true}
   - {name: 🐟 漏网之鱼, <<: *pr}
   - {name: 🎮 游戏平台, <<: *pr}
@@ -150,7 +150,7 @@ proxy-groups:
   - {name: Ⓜ️ 微软云盘, <<: *pr}
   - {name: 🪟 微软服务, <<: *pr}
   - {name: 📺 哔哩哔哩, type: select, proxies: [🎯 全球直连, 🇭🇰 香港节点, 🇨🇳 台湾节点]}
-  - {name: 🎥 奈飞视频, type: select, proxies: [🎥 奈飞节点, 🚀 默认代理, 🇭🇰 香港节点, 🇺🇲 美国节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇨🇳 台湾节点, 🌍 特殊节点, 🚀 手动切换, DIRECT]}
+  - {name: 🎥 奈飞视频, type: select, proxies: [🎥 奈飞节点, 🚀 默认代理, 🇭🇰 香港节点, 🇺🇲 美国节点, 🚀 手动切换, DIRECT]}
   - {name: 🛠️ 自定义, <<: *pr}
 
   - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|HK|hk|Hong Kong|HongKong|hongkong"}
