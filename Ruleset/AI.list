@@ -28,3 +28,9 @@ DOMAIN-SUFFIX, smoot.apple.com
 DOMAIN-SUFFIX, apple-relay.akamaized.net
 DOMAIN-SUFFIX, apple-relay.mask.apple-dns.net
 DOMAIN-SUFFIX, api-siri-prod.apple.com
+DOMAIN,ropes.apple.com
+DOMAIN,mask.icloud.com
+DOMAIN,mask-h2.icloud.com
+DOMAIN,mask-api.icloud.com
+DOMAIN-SUFFIX,issuer.apple.com
+DOMAIN-SUFFIX,app.apple.com
