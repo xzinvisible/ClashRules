@@ -1,0 +1,140 @@
+[General]
+ip-mode = v4-only
+ipv6-vif = off
+dns-server = system
+sni-sniffing = true
+disable-stun = false
+dns-reject-mode = LoopbackIP
+domain-reject-mode = DNS
+udp-fallback-mode = REJECT
+wifi-access-http-port = 7222
+wifi-access-socks5-port = 7221
+allow-wifi-access = false
+interface-mode = auto
+test-timeout = 2
+disconnect-on-policy-change = false
+switch-node-after-failure-times = 3
+internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
+proxy-test-url = http://www.gstatic.com/generate_204
+resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
+ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+
+[Proxy]
+
+
+[Remote Proxy]
+
+
+[Remote Filter]
+香港筛选 = NameRegex, FilterKey = "^(?=.*((?i)🇭🇰|香港|港|(\b(HK|Hong)(\d+)?\b))).*$"
+台湾筛选 = NameRegex, FilterKey = "^(?=.*((?i)🇹🇼|台湾|新北|彰化|(\b(TW|Tai|Taiwan)(\d+)?\b))).*$"
+日本筛选 = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|(\b(JP|Japan)(\d+)?\b))).*$"
+狮城筛选 = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|坡|狮|(\b(SG|Singapore)(\d+)?\b))).*$"
+美国筛选 = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States|LA)(\d+)?\b))).*$"
+特殊筛选 = NameRegex, FilterKey = "^(?=.*((?i)土|土耳其|阿|阿根廷|尼|尼日利亚|印度|(\b(tr|Turkey|AG|Argentina|Nigeria|NI)(\d+)?\b))).*$"
+奈飞筛选 = NameRegex, FilterKey = "^(?=.*((?i)奈飞|解锁|(\b(NETFLIX|Media|nf|CNF)(\d+)?\b))).*$"
+tailscale = NameRegex, FilterKey = "^(?=.*((?i)tailscale|Tailscale)(\d+)?\b))).*$"
+全部节点 = NameRegex, FilterKey = "[\s\S]"
+
+[Proxy Group]
+
+🚀 默认代理 = select,🇭🇰 香港节点,🇺🇲 美国节点,🇯🇵 日本节点,🇸🇬 狮城节点,🇨🇳 台湾节点,🌍 特殊节点,🚀 手动切换,DIRECT
+🚀 手动切换 = select,DIRECT,全部节点
+🐟 漏网之鱼 = select,🚀 默认代理,🇭🇰 香港节点,🇺🇲 美国节点,🇯🇵 日本节点,🇸🇬 狮城节点,🇨🇳 台湾节点,🌍 特殊节点,🚀 手动切换,DIRECT
+🏠 内网 = select,🖥️ tailscale,DIRECT
+🎮 游戏平台 = select,🚀 默认代理,🇭🇰 香港节点,🇺🇲 美国节点,🇯🇵 日本节点,🇸🇬 狮城节点,🇨🇳 台湾节点,🌍 特殊节点,🚀 手动切换,DIRECT
+💬 Ai平台 = select,🚀 默认代理,🇭🇰 香港节点,🇺🇲 美国节点,🇯🇵 日本节点,🇸🇬 狮城节点,🇨🇳 台湾节点,🌍 特殊节点,🚀 手动切换,DIRECT
+Ⓜ️ 微软云盘 = select,🚀 默认代理,🇭🇰 香港节点,🇺🇲 美国节点,🇯🇵 日本节点,🇸🇬 狮城节点,🇨🇳 台湾节点,🌍 特殊节点,🚀 手动切换,DIRECT
+🪟 微软服务 = select,🚀 默认代理,🇭🇰 香港节点,🇺🇲 美国节点,🇯🇵 日本节点,🇸🇬 狮城节点,🇨🇳 台湾节点,🌍 特殊节点,🚀 手动切换,DIRECT
+📺 哔哩哔哩 = select,🎯 全球直连,🇭🇰 香港节点,🇨🇳 台湾节点
+🎥 奈飞视频 = select,🎥 奈飞节点,🚀 默认代理,🇭🇰 香港节点,🇺🇲 美国节点,🇯🇵 日本节点,🇸🇬 狮城节点,🇨🇳 台湾节点,🌍 特殊节点,🚀 手动切换
+🛠️ 自定义 = select,🚀 默认代理,🇭🇰 香港节点,🇺🇲 美国节点,🇯🇵 日本节点,🇸🇬 狮城节点,🇨🇳 台湾节点,🌍 特殊节点,🚀 手动切换,DIRECT
+🇭🇰 香港节点 = select,香港筛选
+🇺🇲 美国节点 = select,美国筛选
+🇯🇵 日本节点 = select,日本筛选
+🇸🇬 狮城节点 = select,狮城筛选
+🇨🇳 台湾节点 = select,台湾筛选
+🖥️ tailscale = select,tailscale
+🌍 特殊节点 = select,特殊筛选
+🎥 奈飞节点 = select,奈飞筛选
+🎯 全球直连 = select,DIRECT,🚀 默认代理
+🛑 广告拦截 = select,REJECT,DIRECT
+
+
+[Rule]
+# Local Rule
+# Type:DOMAIN-SUFFIX,DOMAIN,DOMAIN-KEYWORD,USER-AGENT,URL-REGEX,IP-CIDR,IP-CIDR6,IP-ASN
+# Strategy:DIRECT,Proxy,REJECT
+# Options:no-resolve(no-resolve(only for cidr))
+# IP-CIDR, 192.168.0.0/16, DIRECT
+# IP-CIDR, 10.0.0.0/8, DIRECT
+# IP-CIDR, 172.16.0.0/12, DIRECT
+# IP-CIDR, 127.0.0.0/8, DIRECT
+# 配置文件已自带远程GEOIP, cn, DIRECT规则，请勿在此添加
+# 请勿修改远程CN REGION规则的排序甚至删除
+GEOIP,cn,🎯 全球直连
+GEOIP,lan,🎯 全球直连
+FINAL,🐟 漏网之鱼
+
+[Remote Rule]
+
+https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/Myproxy.list, policy=🛠️ 自定义, tag=Myproxy, enabled=true
+https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/LAN.list,policy=🏠 内网 , tag=Mylan, enabled=true
+https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/Mydirect.list, policy=🎯 全球直连, tag=Mydirect, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list, policy=📺 哔哩哔哩, tag=BilibiliHMT, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list, policy=📺 哔哩哔哩, tag=Bilibili, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list, policy=🎯 全球直连, tag=lanip, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list, policy=🎯 全球直连, tag=UnBan, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list, policy=🎯 全球直连, tag=GoogleFCM, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list, policy=🎯 全球直连, tag=Apple, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list, policy=🎯 全球直连, tag=ChinaMedia, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list, policy=🎯 全球直连, tag=ChinaIp, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list, policy=🎯 全球直连, tag=ChinaDomain, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list, policy=🎯 全球直连, tag=ChinaCompanyIp, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list, policy=🎯 全球直连, tag=Download, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list, policy=🛑 广告拦截, tag=BanAD, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list, policy=🛑 广告拦截, tag=BanProgramAD, enabled=true
+https://raw.githubusercontent.com/xzinvisible/ClashRules/main/Ruleset/Myban.list, policy=🛑 广告拦截, tag=Myban, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list, policy=Ⓜ️ 微软云盘, tag=OneDrive, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list, policy=🪟 微软服务, tag=Microsoft, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list, policy=💬 Ai平台, tag=AI, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list, policy=💬 Ai平台, tag=OpenAi, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list, policy=🎮 游戏平台, tag=Epic, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list, policy=🎮 游戏平台, tag=Origin, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list, policy=🎮 游戏平台, tag=Sony, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list, policy=🎮 游戏平台, tag=Steam, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list, policy=🎮 游戏平台, tag=Nintendo, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list, policy=🎥 奈飞视频, tag=Netflix, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list, policy=🚀 默认代理, tag=ProxyGFWlist, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list, policy=🚀 默认代理, tag=ProxyMedia, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list, policy=🚀 默认代理, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list, policy=🚀 默认代理, tag=YouTube, enabled=true
+
+[Host]
+
+[Rewrite]
+
+[Script]
+
+[Plugin]
+https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/AppleWeatherEnhancer.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QuickSearch.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/JD_Price.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, enabled=true
+https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy=🚀 默认代理, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/NodeSeek.plugin, policy=🚀 默认代理, enabled=true
+
+[Mitm]
+ca-p12 = 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
+ca-passphrase = 9D4392AN
+hostname =
+ca-p12 = 
+ca-passphrase = 
+skip-server-cert-verify = false
