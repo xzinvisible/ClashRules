@@ -150,12 +150,11 @@ proxy-groups:
   - {name: Ⓜ️ 微软云盘, <<: *pr}
   - {name: 🪟 微软服务, <<: *pr}
   - {name: 📺 哔哩哔哩, type: select, proxies: [🎯 全球直连, 🇭🇰 香港节点]}
-  - {name: 🎥 奈飞视频, type: select, proxies: [🎥 奈飞节点, 🚀 默认代理, 🇭🇰 香港节点, 🇺🇲 美国节点, 🚀 手动切换, DIRECT]}
+  - {name: 🎥 奈飞视频, type: select, proxies: [🚀 默认代理, 🇭🇰 香港节点, 🇺🇲 美国节点, 🚀 手动切换, DIRECT]}
   - {name: 🛠️ 自定义, <<: *pr}
 
   - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|HK|hk|Hong Kong|HongKong|hongkong"}
   - {name: 🇺🇲 美国节点, type: select, include-all: true, filter: "^(?=.*(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|LA|圣何塞|圣克拉拉|西雅图|芝加哥|us|US|United States))(?!.*(Claw)).*"}
-  - {name: 🎥 奈飞节点, type: select, include-all: true, filter: "(?i)NF|奈飞|解锁|Netflix|NETFLIX|Media"}
 
   - {name: 🎯 全球直连, type: select, proxies: [DIRECT, 🚀 默认代理]}
   - {name: 🛑 广告拦截, type: select, proxies: [REJECT, DIRECT]}
