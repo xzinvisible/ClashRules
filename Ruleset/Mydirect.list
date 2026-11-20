@@ -20,3 +20,10 @@ IP-CIDR,142.171.77.152,no-resolve
 
 #complement
 DOMAIN-SUFFIX,chiphell.com
+
+# === Siri 核心基础域名直连 ===
+DOMAIN,guzzoni.apple.com
+DOMAIN,dejavu.apple.com
+DOMAIN,sequoia.apple.com
+DOMAIN-SUFFIX,siri.apple.com
+DOMAIN-SUFFIX,smoot.apple.com
