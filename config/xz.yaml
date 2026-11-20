@@ -168,6 +168,7 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
   - RULE-SET,myproxy,🛠️ 自定义
+  - RULE-SET,myai,💬 Ai平台
   - RULE-SET,mydirect,🎯 全球直连
   - RULE-SET,bilibilihmt,📺 哔哩哔哩
   - RULE-SET,bilibili,📺 哔哩哔哩
@@ -192,7 +193,6 @@ rules:
   - GEOSITE,google,💬 Ai平台
   - RULE-SET,ai,💬 Ai平台
   - RULE-SET,openai,💬 Ai平台
-  - RULE-SET,myai,💬 Ai平台
   - RULE-SET,epic,🎮 游戏平台
   - RULE-SET,origin,🎮 游戏平台
   - RULE-SET,sony,🎮 游戏平台
