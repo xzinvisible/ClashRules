@@ -96,6 +96,16 @@ dns:
     - "*.sktswe.net"
     - "rtc.goodfone.co.kr"
     - "*.chattti.com"
+    - "guzzoni.apple.com"
+    - "dejavu.apple.com"
+    - "sequoia.apple.com"
+    - "+.siri.apple.com"
+    - "+.smoot.apple.com"
+    - "guzzoni.apple.com"
+    - "dejavu.apple.com"
+    - "sequoia.apple.com"
+    - "+.siri.apple.com"
+    - "+.smoot.apple.com"
   fallback-filter:
     ipcidr:
       - 0.0.0.0/8
@@ -169,6 +179,7 @@ proxy-groups:
 rules:
   - RULE-SET,myproxy,🛠️ 自定义
   - RULE-SET,myai,💬 Ai平台
+  - GEOSITE,google,💬 Ai平台
   - RULE-SET,mydirect,🎯 全球直连
   - RULE-SET,bilibilihmt,📺 哔哩哔哩
   - RULE-SET,bilibili,📺 哔哩哔哩
